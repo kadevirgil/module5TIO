@@ -10,6 +10,7 @@ def review(request):
         
         if form.is_valid(): 
             print(form.cleaned_data)
+            form.save()
             return HttpResponseRedirect("confirmation")
     else:
         form = ReviewForm() 

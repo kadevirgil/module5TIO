@@ -4,4 +4,5 @@ from django.db import models
 class Review(models.Model): 
     username = models.CharField(max_length=100)
     email = models.EmailField()
-    feedback = models.TextField()
+    feedback = models.TextField(max_length=200)
+    
